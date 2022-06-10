@@ -1,0 +1,57 @@
+/* Button Styling */
+.site-button{
+    background-color: var(--clr-primary) ;
+    position: relative;
+    z-index: 1;
+	vertical-align: middle;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    outline: none;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    line-height: 1.42857;
+	border-radius: 3px;
+	text-align:center;
+}
+.site-button:hover,
+.site-button:focus,
+.active > .site-button {
+    background-color: var(--clr-primary);
+    color: #fff;
+    transition: all 0.2s linear;
+}
+.site-button:after {
+    background-color: #000;
+    content: "";
+    height: 100%;
+    left: 50%;
+    opacity: 0.15;
+    position: absolute;
+    top: 0;
+    transform: skewX(0);
+    -o-transform: skewX(0);
+    -ms-transform: skewX(0);
+    -webkit-transform: skewX(0);
+    -moz-transform: skewX(0);
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    width: 0;
+    z-index: -1;
+}
+.site-button:hover:after {
+	left: 6%;
+    width: 87%;
+	transform: skewX(25deg);
+	-o-transform: skewX(25deg);
+	-ms-transform: skewX(25deg);
+	-webkit-transform: skewX(25deg);
+	-ms-transform: skewX(25deg);
+}

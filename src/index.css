@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+  .home-review-bg-image {
+    background-image: none !important;
+  }
+  .testimonial-curv-bx1:before{
+    background-image: none !important;
+  }
+  .overlay-primary-hr1:after{
+    background-color:white ;
+    position: unset;
+  }
+  .opacity-120{
+    opacity:1.2 !important;
+  }
+  .service-details-lits{
+    color: white !important;
+  }
+  .contact-widget-dark{
+    background-color: #1e293b !important;
+  }
+  .contactusdarkform{
+    background-color: #0f172a !important;
+  }
+  .map-dark{
+    filter: invert(100%) !important;
+  }
+  .sub-menu-client {
+    position: absolute;
+    margin-top: 2.5rem;
+    width: 14rem;
+    transform-origin: top right;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+    --tw-ring-opacity: 0.05;
+}
+}
+
+@layer base {
+
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --clr-primary: #0096ff;
+    --clr-primary-light: hsl(34, 100%, 53%);
+    --clr-primary-dark: hsl(30, 100%, 47%);
+    --clr-primary-selection: #4285F4;
+    --clr-secondary: hsl(227, 100%, 51%);
+    --clr-secondary-light: hsl(233, 100%, 64%);
+    --clr-secondary-dark: hsl(228, 100%, 48%);
+    --clr-dark-gray: #23292e;
+    --clr-yellow-cream: #f8f4d9;
+    --clr-google: #EA4335;
+    --clr-github: rgb(27,31,35);
+    --clr-twitter: #1da1f2;
+    --clr-facebook: #3b5998;
+    --font-body: 'Libre Franklin', 'ui-sans-serif', 'sans-serif', 'system-ui';
+    --font-title: 'Jost', 'ui-sans-serif', 'sans-serif', 'system-ui';
+  }
+
+  *::selection {
+    background-color: var(--clr-primary-selection);
+    color: #121212;
+  }
+
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-my-body overflow-x-hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    @apply font-my-title tracking-my-tiny font-semibold ;
+  }
+
+  .btn-regular {
+    @apply inline-block cursor-pointer text-center uppercase py-3 px-6 font-my-title font-medium tracking-wide leading-none text-black bg-my-primary duration-300 hover:bg-my-primary-light;
+  }
+  .btn-login {
+    @apply inline-block cursor-pointer text-center uppercase py-3 px-6 font-my-title font-medium tracking-wider leading-none text-white bg-blue-500 duration-300 hover:bg-sky-600;
+  }
+  .btn-register {
+    @apply inline-block cursor-pointer text-center uppercase py-3 px-6 font-my-title font-medium tracking-wide leading-none text-white bg-gray-900 duration-300 hover:bg-black;
+  }
+
+  .btn-social-login-google {
+    @apply w-full h-10 text-white flex flex-nowrap items-center text-center duration-300 hover:ring-4 hover:ring-red-600;
+  }
+  .btn-social-login-git {
+    @apply w-full h-10 text-white flex flex-nowrap items-center text-center duration-300 hover:ring-4 hover:ring-black;
+  }
+  .btn-social-login-twitter {
+    @apply w-full h-10 text-white flex flex-nowrap items-center text-center duration-300 hover:ring-4 hover:ring-blue-500;
+  }
+
+  .top-bar {
+    @apply h-0 lg:h-12 py-1 text-lg text-white shadow flex items-center top-0 left-0 w-full z-20;
+  }
+
+  .navbar {
+    @apply h-20 lg:h-28 py-1 bg-white shadow flex items-center relative top-0 left-0 w-full z-30;
+  }
+
+  .dashboard-menu-link {
+    @apply py-2 px-1 xl:px-3 w-full flex flex-nowrap items-center font-my-title uppercase font-medium text-gray-800 hover:text-white;
+  }
+
+  .contact-form-input {
+    @apply w-full h-12 px-4 rounded bg-white text-black text-sm border-b border-l focus: border-my-primary focus:outline-none;
+  }
+
+  .footer-text {
+    @apply text-gray-300 text-my-sm leading-normal;
+  }
+
+  .footer-link {
+    @apply inline-block mb-2 hover: text-my-primary;
+  }
+
+  .form-field {
+    @apply h-10 w-full border border-gray-300 px-3 py-1 text-sm text-gray-700;
+  }
+
+  .sub-menu {
+    @apply origin-top-right absolute mt-12 w-56 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none
+  }
+
+  .review-form-button{
+    @apply text-white rounded-md transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black duration-300 cursor-pointer hover:text-blue-50 ring-4 ring-blue-200 bg-gradient-to-r from-cyan-500 to-blue-500 dark:text-gray-600 w-full
+  }
+}
+
+.contact-form-input[readonly] {
+  background-color: rgba(255, 255, 255, 0.83);
+}
+
+li {
+  list-style: none;
+}
+
+/* test colors */
+/* code a b {
+  color: hsl(46, 100%, 63%);
+  color: hsl(47, 100%, 51%);
+  color: hsl(45, 100%, 50%);
+  background-color: hsl(2, 85%, 76%);
+  background-color: hsl(1, 79%, 66%);
+  background-color: hsl(1, 91%, 60%);
+  border-color: hsl(233, 100%, 64%);
+  border-color: hsl(227, 100%, 51%);
+  border-color: hsl(228, 100%, 48%);
+} */
