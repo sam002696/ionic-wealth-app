@@ -27,17 +27,16 @@ import UploadDocument from '../UploadDocument/UploadDocument';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import './Dashboard.css'
-import { Redirect } from 'react-router-dom';
-import AdminRoute from '../../Login/AdminRoute/AdminRoute';
-import AdminDashboard from '../AdminDashboard/AdminDashboard';
+// import { Redirect } from 'react-router-dom';
 
 
 
 
 const Dashboard = () => {
+    const { isAdmin, logOut } = useAuthContexts();
     const location = useLocation();
     const history = useHistory();
-    const { isAdmin, logOut } = useAuthContexts();
+
     let { path, url } = useRouteMatch();
 
     // dashboard nav link active style
@@ -180,8 +179,9 @@ const Dashboard = () => {
                     <div className="lg:container p-0 lg:p-0 w-full">
                         <Switch>
                             <Route exact path={`${path}`}>
-                                {(isAdmin && (<Redirect to="admindashboard" />))}
-                                {(!isAdmin && <DashboardHome />)}
+                                <DashboardHome />
+                                {/* {(isAdmin && (<Redirect to="admindashboard" />))}
+                                {(!isAdmin && <DashboardHome />)} */}
                             </Route>
                             <Route path={`${path}/client-agreement`}>
                                 <ClientAgreement />

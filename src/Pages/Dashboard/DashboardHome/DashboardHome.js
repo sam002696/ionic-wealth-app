@@ -19,7 +19,7 @@ const DashboardHome = () => {
 
 
             <div class="mb-12 border-b border-gray-200 dark:border-gray-700">
-                <ul class="flex flex-wrap 2xl:w-3/4 2xl:mx-auto text-sm font-medium text-center lg:justify-evenly" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                <ul class="flex flex-wrap 2xl:mx-auto text-sm font-medium text-center lg:justify-evenly" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                     <li >
                         <button className={toggleState === 1 ? "inline-block p-4 rounded-t-lg border-b-2  border-blue-600 dark:border-blue-500 active-tabs-dashboard-user" : "inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"}
                             onClick={() => toggleTab(1)}>

@@ -146,8 +146,8 @@ const MainAdminDashboard = () => {
                 }}>
                     <div className="lg:container m-0 lg:m-0 p-0 lg:p-0">
                         <Switch>
-
                             <>
+
                                 <AdminRoute exact path={`${path}`}>
                                     <AdminDashboard />
                                 </AdminRoute>

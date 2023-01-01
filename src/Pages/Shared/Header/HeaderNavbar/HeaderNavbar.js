@@ -61,30 +61,7 @@ const HeaderNavbar = () => {
                             <img src={logos} alt="Ionic Wealth logo" className="w-full" />
                         </Link>
                     </div>
-                    {/* <div className="flex-shrink-0 md:ml-12 h-100 border-l border-r px-2 md:px-3 text-center flex flex-col justify-center font-my-title">
-                    {!user.email ? (
-                        <NavLink
-                            to="/login"
-                            activeStyle={navLinkActiveStyle}
-                            className="uppercase font-semibold text-base text-my-dark-gray hover:text-my-primary"
-                        >
-                            <RiLock2Line className="mx-auto text-my-primary" />
-                            Login
-                        </NavLink>
-                    ) : (
-                        <div>
-                            <p className="normal-case text-true-gray-500 text-sm w-20 truncate">
-                                {user?.displayName}
-                            </p>
-                            <button
-                                className="uppercase font-semibold text-base leading-none text-my-dark-gray hover:text-my-primary"
-                                onClick={logOut}
-                            >
-                                Logout
-                            </button>
-                        </div>
-                    )}
-                </div> */}
+
                     <div className="hidden lg:block flex-grow">
                         <MainMenu />
                     </div>

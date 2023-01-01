@@ -1,34 +1,45 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-    let history = useHistory();
-    const handleHome = () => {
-        history.push("/home");
-    }
-    const handleLogin = () => {
-        history.push("/login");
-    }
     return (
-        <div>
-            <div className="bg-gradient-to-r from-sky-300 to-blue-200">
-                <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
-                    <div className="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
-                        <div className="border-t border-gray-200 text-center pt-8">
-                            <h1 className="text-9xl font-bold text-sky-400">403</h1>
-                            <h1 className="text-6xl font-medium py-8">You are not permitted to see this.</h1>
-                            <p className="text-2xl pb-8 px-12 font-medium">The page you are trying to access has restricted access. If you feel this is a mistake contact your admin.</p>
-                            <button onClick={handleHome} className="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6">
-                                HOME
-                            </button>
-                            <button onClick={handleLogin} className="bg-gradient-to-r from-red-400 to-red-500 hover:from-red-500 hover:to-red-500 text-white font-semibold px-6 py-3 rounded-md">
-                                LOGIN
-                            </button>
+        <>
+            {/*
+          This example requires updating your template:
+  
+          ```
+          <html class="h-full">
+          <body class="h-full">
+          ```
+        */}
+            <div className="bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
+                <div className="max-w-max  mx-auto">
+                    <main className="sm:flex">
+                        <p className="text-4xl font-extrabold text-blue-600 sm:text-5xl">403</p>
+                        <div className="sm:ml-6">
+                            <div className="sm:border-l sm:border-gray-200 sm:pl-6">
+                                <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Page Forbidden</h1>
+                                <p className="mt-5 text-base text-gray-500">The page you are trying to access has restricted access. If you feel this is a mistake contact your admin.</p>
+                            </div>
+                            <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
+                                <Link
+                                    to="/home"
+                                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                >
+                                    Go back home
+                                </Link>
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                >
+                                    Contact support
+                                </Link>
+                            </div>
                         </div>
-                    </div>
+                    </main>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

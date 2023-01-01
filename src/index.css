@@ -6,31 +6,40 @@
   .filter-grayscale {
     filter: grayscale(100%);
   }
+
   .home-review-bg-image {
     background-image: none !important;
   }
-  .testimonial-curv-bx1:before{
+
+  .testimonial-curv-bx1:before {
     background-image: none !important;
   }
-  .overlay-primary-hr1:after{
-    background-color:white ;
+
+  .overlay-primary-hr1:after {
+    background-color: white;
     position: unset;
   }
-  .opacity-120{
-    opacity:1.2 !important;
+
+  .opacity-120 {
+    opacity: 1.2 !important;
   }
-  .service-details-lits{
+
+  .service-details-lits {
     color: white !important;
   }
-  .contact-widget-dark{
+
+  .contact-widget-dark {
     background-color: #1e293b !important;
   }
-  .contactusdarkform{
+
+  .contactusdarkform {
     background-color: #0f172a !important;
   }
-  .map-dark{
+
+  .map-dark {
     filter: invert(100%) !important;
   }
+
   .sub-menu-client {
     position: absolute;
     margin-top: 2.5rem;
@@ -46,7 +55,7 @@
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
     --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
     --tw-ring-opacity: 0.05;
-}
+  }
 }
 
 @layer base {
@@ -66,7 +75,7 @@
     --clr-dark-gray: #23292e;
     --clr-yellow-cream: #f8f4d9;
     --clr-google: #EA4335;
-    --clr-github: rgb(27,31,35);
+    --clr-github: rgb(27, 31, 35);
     --clr-twitter: #1da1f2;
     --clr-facebook: #3b5998;
     --font-body: 'Libre Franklin', 'ui-sans-serif', 'sans-serif', 'system-ui';
@@ -89,7 +98,7 @@
   }
 
   body {
-    @apply font-my-body overflow-x-hidden;
+    @apply font-my-body;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -100,15 +109,17 @@
   h5,
   h6,
   label {
-    @apply font-my-title tracking-my-tiny font-semibold ;
+    @apply font-my-title tracking-my-tiny font-semibold;
   }
 
   .btn-regular {
     @apply inline-block cursor-pointer text-center uppercase py-3 px-6 font-my-title font-medium tracking-wide leading-none text-black bg-my-primary duration-300 hover:bg-my-primary-light;
   }
+
   .btn-login {
     @apply inline-block cursor-pointer text-center uppercase py-3 px-6 font-my-title font-medium tracking-wider leading-none text-white bg-blue-500 duration-300 hover:bg-sky-600;
   }
+
   .btn-register {
     @apply inline-block cursor-pointer text-center uppercase py-3 px-6 font-my-title font-medium tracking-wide leading-none text-white bg-gray-900 duration-300 hover:bg-black;
   }
@@ -116,9 +127,11 @@
   .btn-social-login-google {
     @apply w-full h-10 text-white flex flex-nowrap items-center text-center duration-300 hover:ring-4 hover:ring-red-600;
   }
+
   .btn-social-login-git {
     @apply w-full h-10 text-white flex flex-nowrap items-center text-center duration-300 hover:ring-4 hover:ring-black;
   }
+
   .btn-social-login-twitter {
     @apply w-full h-10 text-white flex flex-nowrap items-center text-center duration-300 hover:ring-4 hover:ring-blue-500;
   }
@@ -155,7 +168,7 @@
     @apply origin-top-right absolute mt-12 w-56 shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none
   }
 
-  .review-form-button{
+  .review-form-button {
     @apply text-white rounded-md transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-black duration-300 cursor-pointer hover:text-blue-50 ring-4 ring-blue-200 bg-gradient-to-r from-cyan-500 to-blue-500 dark:text-gray-600 w-full
   }
 }

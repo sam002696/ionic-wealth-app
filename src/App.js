@@ -1,31 +1,30 @@
-import React from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
-import AuthProvider from './contexts/AuthProvider/AuthProvider';
-import LoginForm from './Pages/Login/LoginForm/LoginForm';
-import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import RegisterForm from './Pages/Login/RegisterForm/RegisterForm';
-import NotFound from './Pages/NotFound/NotFound';
-import Page404 from './Pages/NotFound/Page404';
+import AuthProvider from "./contexts/AuthProvider/AuthProvider";
+import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
+import LoginForm from "./Pages/Login/LoginForm/LoginForm";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import RegisterForm from "./Pages/Login/RegisterForm/RegisterForm";
+import NewDashboard from "./Pages/New Dashboard/NewDashboard";
+import NewAdminDashboard from "./Pages/NewAdminDashboard/NewAdminDashboard";
+import NotFound from "./Pages/NotFound/NotFound";
+import Page404 from "./Pages/NotFound/Page404";
 
-import TermsandConditions from './Pages/Policies/TermsandConditions/TermsandConditions';
-import ReviewForm from './Pages/Review/ReviewForm';
-import ServiceDetailsList from './Pages/ServiceDetailsList/ServiceDetailsList/ServiceDetailsList';
-import PreLoader from './Pages/Shared/PreLoader/PreLoader';
-import StartFromTop from './Pages/Shared/StartFromTop/StartFromTop';
-import Testimonial from './Pages/Testimonial/Testimonial';
-import Webviewer from './Pages/WebViewer/Webviewer';
-const LazyContactUs = React.lazy(() => import('./Pages/ContactUs/ContactUs'));
-const LazyHome = React.lazy(() => import('./Pages/Home/Home/Home'));
-const LazyDashboard = React.lazy(() => import('./Pages/Dashboard/Dashboard/Dashboard'));
-const LazyMainAdminDashboard = React.lazy(() => import('./Pages/Dashboard/Dashboard/MainAdminDashboard'));
-
-
+import TermsandConditions from "./Pages/Policies/TermsandConditions/TermsandConditions";
+import ReviewForm from "./Pages/Review/ReviewForm";
+import ServiceDetailsList from "./Pages/ServiceDetailsList/ServiceDetailsList/ServiceDetailsList";
+import PreLoader from "./Pages/Shared/PreLoader/PreLoader";
+import StartFromTop from "./Pages/Shared/StartFromTop/StartFromTop";
+import Testimonial from "./Pages/Testimonial/Testimonial";
+import Webviewer from "./Pages/WebViewer/Webviewer";
+const LazyContactUs = React.lazy(() => import("./Pages/ContactUs/ContactUs"));
+const LazyHome = React.lazy(() => import("./Pages/Home/Home/Home"));
+// const LazyDashboard = React.lazy(() => import('./Pages/Dashboard/Dashboard/Dashboard'));
 
 function App() {
   return (
-    <div >
-
+    <div>
       <AuthProvider>
         <Router>
           <StartFromTop />
@@ -50,23 +49,27 @@ function App() {
               <React.Suspense fallback={<PreLoader />}>
                 <LazyContactUs />
               </React.Suspense>
-
             </Route>
 
             <Route path="/pdf">
               <Webviewer />
             </Route>
-
-            <Route path="/admindashboard">
+            <AdminRoute path="/newadmindashboard">
+              <NewAdminDashboard />
+            </AdminRoute>
+            <PrivateRoute path="/newdashboard">
+              <NewDashboard />
+            </PrivateRoute>
+            {/* <AdminRoute path="/admindashboard">
               <React.Suspense fallback={<PreLoader />}>
                 <LazyMainAdminDashboard />
               </React.Suspense>
-            </Route>
-            <PrivateRoute path="/dashboard">
+            </AdminRoute> */}
+            {/* <PrivateRoute path="/dashboard">
               <React.Suspense fallback={<PreLoader />}>
                 <LazyDashboard />
               </React.Suspense>
-            </PrivateRoute>
+            </PrivateRoute> */}
 
             <Route path="/testimonial">
               <Testimonial />
