@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Ionic Wealth | Financial App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>
+	<img src="https://ionic-wealth-fa.web.app/static/media/Ionic-Wealth-Logo-1000px-LIGHT.a09229f9667d77e0a669.png" height="120" />
+</p>
 
-## Available Scripts
+This is a financial website (clients to log in securely using Firebase Authentication and see their finance history).
 
-In the project directory, you can run:
+This project is deployed on Firebase. To visit the live website [click here](https://ionic-wealth-fa.web.app//).\
+To login as an Admin use `admin@admin.com` and `ASd@43!2` respectively for Username and Password.
 
-### `npm start`
+For the server-side repository [click here](https://github.com/sam002696/ionic-wealth-app-server).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About This Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Here is a brief about this project:
 
-### `npm test`
+- Lightening fast :zap: smooth experience with ReactJS
+- Dynamic server-side hosted on Railway
+- Interactive functional dashboard panel with API management for both admin and general user.
+- Contents, e.g. `Important Documents`, `Upload Documents`, `manage users`, `Finance History` are completely manageable from the dashboard.
+- Firebase secured multiple authentication system
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ![image](https://img.shields.io/badge/Email%20&%20Password-FFC905?style=for-the-badge) ![image](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) ![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ![image](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)
 
-### `npm run build`
+- Robust and adaptive layout to perfectly match any device form factor
+- Organized and well-commented codes to keep it clean on both the developer and client sides
+- Financial website (Elegant website i.e. interactive and all important financial info can be seen at a glance)
+- Pdf Preview & Edit-Ionic Wealth brings PDFTron's powerful SDK to bring accurate and reliable rendering to your digital content of any size and complexity.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `built with`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is built with [ReactJS](https://reactjs.org/).\
+Authentication system is created with [Firebase](https://firebase.google.com/).\
+[Tailwind CSS](https://tailwindcss.com/) is used for the styles.\
+Server side is hosted on Railway.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `purpose`
 
-### `npm run eject`
+This site is a financial website which focuses on client's convieniences e.g. uploading relevant documents in the server, make changes and sign their documents using PDFtron's powerful annotations and see their finance history at a glance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `data`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Data used from Dynamic backend server on [Railway](https://ionic-wealth-app-server-production.up.railway.app/).\
+For example, here is the [services link](https://ionic-wealth-fa.web.app/allservices) for this project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `icons`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Various icons have been used for this project.\
+Icons are collected from [this](https://react-icons.github.io/react-icons/) awesome icon library.
