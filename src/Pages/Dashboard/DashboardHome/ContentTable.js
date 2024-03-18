@@ -13,7 +13,7 @@ const ContentTable = () => {
   useEffect(() => {
     setLoading(true);
     const email = user?.email;
-    const url = `https://ionic-wealth-app-server-production.up.railway.app/documents/${email}`;
+    const url = `http://localhost:5500/documents/${email}`;
     axios
       .get(url, {
         headers: {

@@ -218,7 +218,7 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        const url = `https://ionic-wealth-app-server-production.up.railway.app/users/${user?.email}`;
+        const url = `http://localhost:5500/users/${user?.email}`;
         axios
           .get(url, {
             headers: {
@@ -277,7 +277,7 @@ const useFirebase = () => {
   // save user to database
   const saveUserToDatabase = (email, displayName, method) => {
     const user = { email, displayName };
-    const url = `https://ionic-wealth-app-server-production.up.railway.app/users`;
+    const url = `http://localhost:5500/users`;
     axios(
       {
         method: method,

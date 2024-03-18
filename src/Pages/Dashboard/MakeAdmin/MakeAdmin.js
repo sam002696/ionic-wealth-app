@@ -23,7 +23,7 @@ const MakeAdmin = () => {
   // load all users
   useEffect(() => {
     axios
-      .get(`https://ionic-wealth-app-server-production.up.railway.app/users`)
+      .get(`http://localhost:5500/users`)
       .then((res) => {
         setUsers(res.data);
       })
@@ -51,7 +51,7 @@ const MakeAdmin = () => {
     }
 
     // set admin role in database
-    const url = `https://ionic-wealth-app-server-production.up.railway.app/users/admin`;
+    const url = `http://localhost:5500/users/admin`;
     axios
       .put(url, data, {
         headers: {

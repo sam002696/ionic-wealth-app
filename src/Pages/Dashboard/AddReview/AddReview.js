@@ -52,10 +52,7 @@ const AddReview = () => {
     // }
 
     axios
-      .post(
-        "https://ionic-wealth-app-server-production.up.railway.app/reviews",
-        data
-      )
+      .post("http://localhost:5500/reviews", data)
       .then((res) => {
         // console.log(res);
         if (res.data.insertedId) {

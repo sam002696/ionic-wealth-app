@@ -100,10 +100,7 @@ const UploadDocument = () => {
     // }
 
     axios
-      .post(
-        "https://ionic-wealth-app-server-production.up.railway.app/documents",
-        data
-      )
+      .post("http://localhost:5500/documents", data)
       .then((res) => {
         console.log(res);
         if (res.data.insertedId) {

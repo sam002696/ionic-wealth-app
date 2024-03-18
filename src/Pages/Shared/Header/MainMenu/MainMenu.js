@@ -32,7 +32,7 @@ const MainMenu = () => {
   // fetch single user data
   useEffect(() => {
     setLoading(true);
-    const url = `https://ionic-wealth-app-server-production.up.railway.app/users/${user.email}`;
+    const url = `http://localhost:5500/users/${user.email}`;
     axios
       .get(url, {
         headers: {

@@ -40,7 +40,7 @@ const ManageDocumentItem = ({ document, documents, setDocuments }) => {
       },
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://ionic-wealth-app-server-production.up.railway.app/documents/${id}`;
+        const url = `http://localhost:5500/documents/${id}`;
         axios
           .delete(url)
           .then((res) => {
@@ -70,7 +70,7 @@ const ManageDocumentItem = ({ document, documents, setDocuments }) => {
   const onSubmit = (data) => {
     console.log(data);
     setLoading(true);
-    const url = `https://ionic-wealth-app-server-production.up.railway.app/documents/${email}`;
+    const url = `http://localhost:5500/documents/${email}`;
     axios
       .put(url, data)
       .then((res) => {

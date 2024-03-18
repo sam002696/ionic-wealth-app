@@ -59,14 +59,11 @@ const NewAdminDashboardHome = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        "https://ionic-wealth-app-server-production.up.railway.app/documents",
-        {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      .get("http://localhost:5500/documents", {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      })
       .then((res) => {
         setDocuments(res.data);
         console.log(res.data);
